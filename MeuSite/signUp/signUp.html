@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SignUp</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+  <main id="login-form-wrap">
+    <h2>SignUp</h2>
+
+    <section id="login-form">
+      <p>
+        <input type="text" id="usernameSignUp" name="username" placeholder="Username" required>
+        <i class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="password" id="passwordField1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Deve conter pelo menos um número, uma letra maiúscula, uma letra minúscula e pelo menos 8 caracteres" class="password" name="password" placeholder="Password" required>
+        <i class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="password" id="passwordField2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="A confirmação precisa ser igual a senha" class="password" name="password" placeholder="Confirm Password" required>
+        <i class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="submit" id="login" value="Create account" onclick="setRegistration()">
+      </p>
+    </section>
+
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+
+    <section id="create-account-wrap">
+      <p>
+        <a href="../login/login.html">Back</a>
+      <p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
