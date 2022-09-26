@@ -13,11 +13,9 @@ p {
   position: relative;
 }
 
-a,
-a:link,
-a:visited,
-a:active {
+a {
   color: #3ca9e2;
+  text-decoration: none;
 }
 
 #login-form-wrap {
@@ -51,9 +49,7 @@ input {
   margin: 0;
   color: #8a8b8e;
   border: 1px solid #c2c0ca;
-  font-style: normal;
   font-size: 16px;
-  position: relative;
 }
 
 #username:focus,
@@ -66,38 +62,6 @@ input {
 #password:focus:invalid {
   border-color: #cc1e2b;
   transition: all 0.9s ease;
-}
-
-#username:valid ~ .validation span,
-#password:valid ~ .validation span {
-  background: #0C0;
-  position: absolute;
-  transition: all 0.9s ease;
-}
-
-#username:valid ~ .validation span:first-child,
-#password:valid ~ .validation span:first-child {
-  top: 30px;
-  left: 14px;
-  width: 20px;
-  height: 3px;
-  transform: rotate(-45deg);
-}
-#username:valid ~ .validation span:last-child,
-#password:valid ~ .validation span:last-child {
-  top: 35px;
-  left: 8px;
-  width: 11px;
-  height: 3px;
-  transform: rotate(45deg);
-}
-
-.validation {
-  position: absolute;
-  height: 60px;
-  width: 30px;
-  right: 15px;
-  top: 0px;
 }
 
 #login {

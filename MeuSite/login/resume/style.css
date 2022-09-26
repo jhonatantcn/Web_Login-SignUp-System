@@ -5,10 +5,6 @@ body {
   color: #2b3e51;
 }
 
-h2 {
-  text-align: center;
-}
-
 .resumeLink {
   height: 50px;
   line-height: 50px;
@@ -30,10 +26,13 @@ h2 {
   color: #ffffff;
 }
 
-a,
-a:link,
-a:visited,
-a:active {
+.resumeLink:before {
+  position: relative; 
+  left: -30px;
+  content: "✖";
+}
+
+a {
   color: #3ca9e2;
   text-decoration: none;
 }
@@ -48,77 +47,7 @@ a:active {
   box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.677);
 }
 
-input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  outline: none;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 4px;
-}
-
-#username:focus,
-#password:focus {
-  border-color: #3ca9e2;
-  transition: all 0.9s ease;
-}
-
-#username:focus:invalid,
-#password:focus:invalid {
-  border-color: #cc1e2b;
-  transition: all 0.9s ease;
-}
-
-#username:valid ~ .validation span,
-#password:valid ~ .validation span {
-  background: #0C0;
-  position: absolute;
-  transition: all 0.9s ease;
-}
-
-#username:valid ~ .validation span:first-child,
-#password:valid ~ .validation span:first-child {
-  top: 30px;
-  left: 14px;
-  width: 20px;
-  height: 3px;
-  transform: rotate(-45deg);
-}
-#username:valid ~ .validation span:last-child,
-#password:valid ~ .validation span:last-child {
-  top: 35px;
-  left: 8px;
-  width: 11px;
-  height: 3px;
-  transform: rotate(45deg);
-}
-
-.validation {
-  position: absolute;
-  height: 60px;
-  width: 30px;
-  right: 15px;
-  top: 0px;
-}
-
-#login {
-  border: none;
-  background-color: #26a2e5;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-size: 18px;
-  position: relative;
-  text-align: center;
-}
-
-#login:hover {
-  background-color: #3503fc;
-  transition: all 0.9s ease;
-}
-
-#create-account-wrap {
+#back-wrap {
   background-color: #eeedf1;
   color: #505153;
   font-size: 14px;
